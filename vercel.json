@@ -1,13 +1,3 @@
 {
-  "buildCommand": "cd marina-portfolio && npm run build",
-  "outputDirectory": "marina-portfolio/.next",
-  "installCommand": "cd marina-portfolio && npm install",
-  "devCommand": "cd marina-portfolio && npm run dev",
-  "framework": "nextjs",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/marina-portfolio/$1"
-    }
-  ]
+    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
