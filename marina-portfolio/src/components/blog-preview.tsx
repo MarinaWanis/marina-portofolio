@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
+import { formatDate } from "@/lib/date-utils";
 
 const blogPosts = [
   {
@@ -66,7 +67,7 @@ export function BlogPreview() {
                   </span>
                   <div className="flex items-center text-muted-foreground text-sm">
                     <Calendar className="h-4 w-4 mr-1" />
-                    {new Date(post.date).toLocaleDateString()}
+                    {formatDate(post.date)}
                   </div>
                 </div>
                 
@@ -115,4 +116,5 @@ export function BlogPreview() {
     </section>
   );
 }
+
 

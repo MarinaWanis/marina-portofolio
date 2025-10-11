@@ -1,13 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { Menu, X, Sun, Moon } from "lucide-react";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const navigation = [
     { name: "Home", href: "/" },
@@ -18,37 +23,44 @@ export function Navigation() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
+    <nav className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">MM</span>
+          <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+            <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center shadow-sm">
+              <span className="text-white font-bold text-sm">MM</span>
             </div>
-            <span className="font-semibold text-lg">Marina Maged</span>
+            <span className="font-semibold text-lg bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
+              Marina Maged
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-1">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent transition-all duration-200"
               >
                 {item.name}
               </Link>
             ))}
-            <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="p-2 rounded-md hover:bg-accent transition-colors"
-            >
-              {theme === "dark" ? (
-                <Sun className="h-5 w-5" />
-              ) : (
-                <Moon className="h-5 w-5" />
-              )}
-            </button>
+            <div className="ml-4 pl-4 border-l border-border">
+              <button
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                className="p-2 rounded-md hover:bg-accent transition-colors"
+                title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+              >
+                {mounted && theme === "dark" ? (
+                  <Sun className="h-5 w-5" />
+                ) : mounted ? (
+                  <Moon className="h-5 w-5" />
+                ) : (
+                  <div className="h-5 w-5" />
+                )}
+              </button>
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -57,10 +69,12 @@ export function Navigation() {
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="p-2 rounded-md hover:bg-accent transition-colors"
             >
-              {theme === "dark" ? (
+              {mounted && theme === "dark" ? (
                 <Sun className="h-5 w-5" />
-              ) : (
+              ) : mounted ? (
                 <Moon className="h-5 w-5" />
+              ) : (
+                <div className="h-5 w-5" />
               )}
             </button>
             <button
@@ -75,12 +89,12 @@ export function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 border-t">
+            <div className="px-2 pt-2 pb-3 space-y-1 border-t bg-background/95 backdrop-blur">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-muted-foreground hover:text-foreground transition-colors"
+                  className="block px-3 py-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-all duration-200"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
@@ -93,4 +107,5 @@ export function Navigation() {
     </nav>
   );
 }
+
 
