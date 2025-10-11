@@ -1,6 +1,7 @@
 {
-  "buildCommand": "cd marina-portfolio && npm run build",
-  "outputDirectory": "marina-portfolio/.next",
-  "installCommand": "cd marina-portfolio && npm install",
-  "framework": "nextjs"
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "rootDirectory": "marina-portfolio"
 }
