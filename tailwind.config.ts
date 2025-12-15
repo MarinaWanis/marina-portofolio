@@ -51,6 +51,16 @@ const config: Config = {
     },
   },
   plugins: [],
+  safelist: [
+    'bg-blue-100',
+    'bg-blue-900',
+    'bg-purple-100',
+    'bg-purple-900',
+    'bg-green-100',
+    'bg-green-900',
+    'bg-orange-100',
+    'bg-orange-900',
+  ],
   darkMode: 'class',
 }
 export default config

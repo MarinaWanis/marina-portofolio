@@ -19,25 +19,25 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Marina Maged - RPA & Power BI Specialist",
+    default: "Marina Maged - Automation & Data Engineer",
     template: "%s | Marina Maged"
   },
-  description: "Professional portfolio showcasing RPA automation, Power BI dashboards, and software engineering expertise. Explore my projects and technical insights.",
-  keywords: ["RPA", "Power BI", "Software Engineering", "Automation", "Business Intelligence", "Portfolio"],
+  description: "Automation & Data Engineer with 6+ years building RPA workflows, Power BI dashboards, and backend solutions for e-commerce and operations teams.",
+  keywords: ["Automation", "RPA", "Power BI", "Data Engineering", "Software Engineering", "Django", "Python", "E-commerce", "Operations"],
   authors: [{ name: "Marina Maged" }],
   creator: "Marina Maged",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://marinamaged.com",
-    title: "Marina Maged - RPA & Power BI Specialist",
-    description: "Professional portfolio showcasing RPA automation, Power BI dashboards, and software engineering expertise.",
+    title: "Marina Maged - Automation & Data Engineer",
+    description: "Automation & Data Engineer with 6+ years building RPA workflows, Power BI dashboards, and backend solutions for e-commerce and operations teams.",
     siteName: "Marina Maged Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marina Maged - RPA & Power BI Specialist",
-    description: "Professional portfolio showcasing RPA automation, Power BI dashboards, and software engineering expertise.",
+    title: "Marina Maged - Automation & Data Engineer",
+    description: "Automation & Data Engineer with 6+ years building RPA workflows, Power BI dashboards, and backend solutions for e-commerce and operations teams.",
   },
   robots: {
     index: true,

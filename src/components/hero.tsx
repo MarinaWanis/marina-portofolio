@@ -6,9 +6,13 @@ import { ArrowRight, Download } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section className="min-h-[85vh] flex items-center justify-center py-16 lg:py-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* Subtle background texture */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_14px] opacity-40"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-purple-600/5 opacity-50"></div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -22,28 +26,26 @@ export function Hero() {
                   Marina Maged
                 </span>
               </h1>
-              <p className="text-xl sm:text-2xl text-muted-foreground mt-4">
-                RPA & Power BI Specialist
+              <p className="text-xl sm:text-2xl text-foreground/90 dark:text-foreground/95 mt-4 font-semibold">
+                Automation & Data Engineer
               </p>
-              <p className="text-lg text-muted-foreground mt-6 max-w-2xl">
-                I craft intelligent automation solutions and transform data into actionable insights. 
-                Specializing in RPA implementations, Power BI dashboards, and software engineering 
-                to drive business efficiency and growth.
+              <p className="text-lg text-foreground/80 dark:text-foreground/85 mt-6 max-w-2xl leading-relaxed">
+                I build automation, analytics, and backend solutions that reduce manual work and improve operational visibility in e-commerce systems.
+              </p>
+              <p className="text-sm text-muted-foreground dark:text-muted-foreground/90 mt-4 max-w-2xl">
+                6+ years across RPA, Power BI, and software engineering in operations and e-commerce platforms.
               </p>
             </div>
             
             <div className="flex flex-wrap gap-3">
               <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">
-                RPA Automation
+                Automation (RPA)
               </span>
               <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm font-medium">
-                Power BI
+                Data Analytics (Power BI)
               </span>
               <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">
                 Software Engineering
-              </span>
-              <span className="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm font-medium">
-                Data Analytics
               </span>
             </div>
             
@@ -52,14 +54,14 @@ export function Hero() {
                 href="/projects"
                 className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors"
               >
-                View My Work
+                View Projects
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center px-6 py-3 border border-border rounded-lg font-medium hover:bg-accent transition-colors"
               >
-                Get In Touch
+                Contact Me
               </Link>
             </div>
           </motion.div>

@@ -4,32 +4,39 @@ import { motion } from "framer-motion";
 
 const skills = [
   {
-    category: "RPA & Automation",
-    icon: "🤖",
+    category: "Languages",
+    icon: "💻",
     color: "blue",
-    technologies: ["UiPath", "Automation Anywhere", "Blue Prism", "Power Automate"],
-    description: "End-to-end automation solutions for business processes"
+    technologies: ["Python", "SQL"],
+    description: "Core programming and query languages"
+  },
+  {
+    category: "Frameworks",
+    icon: "⚙️",
+    color: "purple",
+    technologies: ["Django", "Next.js"],
+    description: "Web and application frameworks"
   },
   {
     category: "Data & Analytics",
     icon: "📊",
-    color: "purple",
-    technologies: ["Power BI", "Tableau", "SQL", "Python", "R"],
-    description: "Transform data into actionable business insights"
-  },
-  {
-    category: "Software Development",
-    icon: "💻",
     color: "green",
-    technologies: ["React", "Next.js", "Node.js", "TypeScript", "Python"],
-    description: "Modern web applications and software solutions"
+    technologies: ["Power BI", "DAX", "Excel"],
+    description: "Business intelligence and data visualization"
   },
   {
-    category: "Cloud & Database",
-    icon: "☁️",
+    category: "Databases",
+    icon: "🗄️",
     color: "orange",
-    technologies: ["AWS", "Azure", "PostgreSQL", "MongoDB", "Docker"],
-    description: "Scalable cloud infrastructure and database management"
+    technologies: ["PostgreSQL", "SQL Server", "SQLite"],
+    description: "Relational database systems"
+  },
+  {
+    category: "Tools",
+    icon: "🔧",
+    color: "blue",
+    technologies: ["Git", "REST APIs", "Postman"],
+    description: "Development and integration tools"
   }
 ];
 
@@ -51,7 +58,7 @@ export function SkillsShowcase() {
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skills.map((skill, index) => (
             <motion.div
               key={skill.category}
@@ -61,7 +68,12 @@ export function SkillsShowcase() {
               viewport={{ once: true }}
               className="bg-card border rounded-xl p-6 text-center hover:shadow-lg transition-shadow"
             >
-              <div className={`w-16 h-16 bg-${skill.color}-100 dark:bg-${skill.color}-900 rounded-full flex items-center justify-center mx-auto mb-4`}>
+              <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${
+                skill.color === 'blue' ? 'bg-blue-100 dark:bg-blue-900' :
+                skill.color === 'purple' ? 'bg-purple-100 dark:bg-purple-900' :
+                skill.color === 'green' ? 'bg-green-100 dark:bg-green-900' :
+                'bg-orange-100 dark:bg-orange-900'
+              }`}>
                 <span className="text-2xl">{skill.icon}</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">{skill.category}</h3>

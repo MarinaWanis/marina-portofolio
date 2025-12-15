@@ -6,7 +6,7 @@ import { Metadata } from "next";
 // what this page contains. Super important for SEO (Search Engine Optimization)!
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Explore my RPA automation projects, Power BI dashboards, and software engineering work.",
+  description: "Explore automation, analytics, and backend solutions built for e-commerce and operations teams.",
 };
 
 // This is the main function that creates your Projects page
@@ -42,23 +42,23 @@ export default function ProjectsPage() {
           <div className="bg-card border rounded-lg p-6 hover:shadow-lg transition-shadow">
             {/* Project Title and Description Section */}
             <div className="mb-4">
-              {/* h3 = heading level 3 (smaller than h1, bigger than regular text)
-                  Change this to your project name! */}
               <h3 className="text-xl font-semibold mb-2">RPA Invoice Processing</h3>
-              {/* This is the project description - tell people what it does! */}
-              <p className="text-muted-foreground">
-                Automated invoice processing workflow using UiPath, reducing manual processing time by 80%.
+              <p className="text-sm font-medium text-foreground/70 dark:text-foreground/80 mb-2">
+                Problem: Manual invoice processing was time-consuming and error-prone for finance teams.
+              </p>
+              <p className="text-muted-foreground mb-3">
+                Built an automated workflow using UiPath to extract, validate, and process invoices from multiple sources. The solution integrates with ERP systems and handles exception routing.
+              </p>
+              <p className="text-sm text-muted-foreground mb-3">
+                <strong>Tech Stack:</strong> UiPath, SQL Server, REST APIs
+              </p>
+              <p className="text-sm text-foreground/80 dark:text-foreground/85">
+                <strong>Impact:</strong> 80% reduction in processing time, 99.5% accuracy rate, eliminated 15+ hours of weekly manual work
               </p>
             </div>
             
-            {/* Tags Section - like labels on a product
-                "flex" = arranges items in a row
-                "flex-wrap" = wraps to next line if needed
-                "gap-2" = small space between tags */}
-            <div className="flex flex-wrap gap-2 mb-4">
-              {/* Each tag is a <span> element
-                  Change the text inside to your technology names
-                  The colors (bg-blue-100, etc.) are styling - you can change these! */}
+            {/* Tags Section */}
+            <div className="flex flex-wrap gap-2 mt-4">
               <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-sm">
                 UiPath
               </span>
@@ -69,22 +69,26 @@ export default function ProjectsPage() {
                 Automation
               </span>
             </div>
-            
-            {/* Impact/Results Section - show what this project achieved! */}
-            <div className="text-sm text-muted-foreground">
-              <strong>Impact:</strong> 80% reduction in processing time, 99.5% accuracy rate
-            </div>
           </div>
 
           {/* Project 2 */}
           <div className="bg-card border rounded-lg p-6 hover:shadow-lg transition-shadow">
             <div className="mb-4">
               <h3 className="text-xl font-semibold mb-2">Sales Analytics Dashboard</h3>
-              <p className="text-muted-foreground">
-                Interactive Power BI dashboard providing real-time sales insights and performance metrics.
+              <p className="text-sm font-medium text-foreground/70 dark:text-foreground/80 mb-2">
+                Problem: Sales teams lacked real-time visibility into performance metrics and trends.
+              </p>
+              <p className="text-muted-foreground mb-3">
+                Developed a comprehensive Power BI dashboard with DAX calculations, connecting to multiple data sources to provide real-time sales insights, forecasting, and performance tracking.
+              </p>
+              <p className="text-sm text-muted-foreground mb-3">
+                <strong>Tech Stack:</strong> Power BI, DAX, SQL Server, Excel
+              </p>
+              <p className="text-sm text-foreground/80 dark:text-foreground/85">
+                <strong>Impact:</strong> 50% faster decision making, improved sales forecasting accuracy, enabled proactive strategy adjustments
               </p>
             </div>
-            <div className="flex flex-wrap gap-2 mb-4">
+            <div className="flex flex-wrap gap-2 mt-4">
               <span className="px-2 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded text-sm">
                 Power BI
               </span>
@@ -95,44 +99,56 @@ export default function ProjectsPage() {
                 Data Visualization
               </span>
             </div>
-            <div className="text-sm text-muted-foreground">
-              <strong>Impact:</strong> 50% faster decision making, improved sales forecasting
-            </div>
           </div>
 
           {/* Project 3 */}
           <div className="bg-card border rounded-lg p-6 hover:shadow-lg transition-shadow">
             <div className="mb-4">
-              <h3 className="text-xl font-semibold mb-2">Customer Service Bot</h3>
-              <p className="text-muted-foreground">
-                Intelligent chatbot for customer support using natural language processing and RPA integration.
+              <h3 className="text-xl font-semibold mb-2">E-commerce Order Processing System</h3>
+              <p className="text-sm font-medium text-foreground/70 dark:text-foreground/80 mb-2">
+                Problem: Order processing required manual intervention and lacked real-time status tracking.
+              </p>
+              <p className="text-muted-foreground mb-3">
+                Built a Django-based backend system with REST APIs to automate order processing, inventory updates, and shipping notifications. Integrated with payment gateways and logistics providers.
+              </p>
+              <p className="text-sm text-muted-foreground mb-3">
+                <strong>Tech Stack:</strong> Python, Django, PostgreSQL, REST APIs
+              </p>
+              <p className="text-sm text-foreground/80 dark:text-foreground/85">
+                <strong>Impact:</strong> 90% reduction in manual order processing, real-time visibility for operations team, scalable to handle 10x order volume
               </p>
             </div>
-            <div className="flex flex-wrap gap-2 mb-4">
+            <div className="flex flex-wrap gap-2 mt-4">
               <span className="px-2 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded text-sm">
                 Python
               </span>
               <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded text-sm">
-                NLP
+                Django
               </span>
               <span className="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded text-sm">
-                AI/ML
+                PostgreSQL
               </span>
-            </div>
-            <div className="text-sm text-muted-foreground">
-              <strong>Impact:</strong> 70% reduction in support tickets, 24/7 availability
             </div>
           </div>
 
           {/* Project 4 */}
           <div className="bg-card border rounded-lg p-6 hover:shadow-lg transition-shadow">
             <div className="mb-4">
-              <h3 className="text-xl font-semibold mb-2">Data Pipeline Automation</h3>
-              <p className="text-muted-foreground">
-                End-to-end data pipeline for ETL processes with automated monitoring and error handling.
+              <h3 className="text-xl font-semibold mb-2">Operations Data Pipeline</h3>
+              <p className="text-sm font-medium text-foreground/70 dark:text-foreground/80 mb-2">
+                Problem: Operations team needed automated data aggregation from multiple systems for reporting.
+              </p>
+              <p className="text-muted-foreground mb-3">
+                Designed and implemented an ETL pipeline using Python to extract data from various sources, transform and validate it, then load into a centralized data warehouse. Includes automated monitoring and error handling.
+              </p>
+              <p className="text-sm text-muted-foreground mb-3">
+                <strong>Tech Stack:</strong> Python, SQL, PostgreSQL, Git
+              </p>
+              <p className="text-sm text-foreground/80 dark:text-foreground/85">
+                <strong>Impact:</strong> 90% reduction in manual data processing, real-time insights for operations dashboards, improved data accuracy
               </p>
             </div>
-            <div className="flex flex-wrap gap-2 mb-4">
+            <div className="flex flex-wrap gap-2 mt-4">
               <span className="px-2 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded text-sm">
                 Python
               </span>
@@ -142,9 +158,6 @@ export default function ProjectsPage() {
               <span className="px-2 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded text-sm">
                 ETL
               </span>
-            </div>
-            <div className="text-sm text-muted-foreground">
-              <strong>Impact:</strong> 90% reduction in manual data processing, real-time insights
             </div>
           </div>
         </div>

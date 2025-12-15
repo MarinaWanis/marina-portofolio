@@ -13,7 +13,7 @@ export function CallToAction() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-primary to-purple-600 rounded-3xl p-8 md:p-12 text-center text-white"
+          className="bg-gradient-to-r from-primary to-purple-600 dark:from-blue-700 dark:to-purple-700 rounded-3xl p-8 md:p-12 text-center text-white"
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Ready to Transform Your Business?

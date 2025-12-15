@@ -14,7 +14,7 @@ export function Footer() {
               <span className="font-semibold text-lg">Marina Maged</span>
             </div>
             <p className="text-muted-foreground">
-              RPA & Power BI Specialist crafting automation solutions and data-driven insights for modern businesses.
+              Automation & Data Engineer building RPA workflows, Power BI dashboards, and backend solutions for e-commerce and operations teams.
             </p>
           </div>
 
