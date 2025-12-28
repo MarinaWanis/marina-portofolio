@@ -6,31 +6,31 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "Enterprise RPA Solution",
-    description: "Automated invoice processing system reducing manual work by 80% and processing time from 2 hours to 15 minutes.",
-    image: "🤖",
-    technologies: ["UiPath", "SQL Server", "Power BI"],
-    category: "RPA",
-    link: "/projects/enterprise-rpa",
-    github: "https://github.com/marinamaged/enterprise-rpa"
+    title: "Multi-Carrier Last‑Mile Integrations & Label Automation",
+    description: "Standardized carrier integration layer supporting multiple last-mile carriers (WeDo, DPX, DPD, Zajel, Jeebly, Bosta, Fulfillment Bridge) with automated label handling, PUDO/locker selection, and webhook subscriptions.",
+    image: "🚚",
+    technologies: ["Python", "Django", "Django ORM", "PostgreSQL", "DRF", "REST APIs"],
+    category: "Backend Integration",
+    link: "/projects/multi-carrier-integrations",
+    github: "https://github.com/marinamaged/clickdna-carrier-integrations"
   },
   {
-    title: "Executive Dashboard Suite",
-    description: "Real-time business intelligence dashboard providing insights across sales, operations, and financial metrics.",
+    title: "Tracking Events Processing Engine",
+    description: "Rule-based and LLM-enriched tracking event processing with database-aware logic (PostgreSQL/SQLite compatibility), batching safeguards, and queue generation for downstream dispatch.",
+    image: "⚙️",
+    technologies: ["Django", "PostgreSQL", "SQLite", "Raw SQL", "LLM Integration", "Cron Services"],
+    category: "Data Processing",
+    link: "/projects/tracking-events-engine",
+    github: "https://github.com/marinamaged/clickdna-tracking-engine"
+  },
+  {
+    title: "Operational Analytics & Exception Monitoring Dashboards",
+    description: "Power BI dashboards providing operational visibility into order health, tracking data quality issues, and exception monitoring with drill-down capabilities for faster incident triage.",
     image: "📊",
-    technologies: ["Power BI", "SQL", "Azure"],
+    technologies: ["Power BI", "DAX", "SQL", "PostgreSQL", "SQLite"],
     category: "Analytics",
-    link: "/projects/executive-dashboard",
-    github: "https://github.com/marinamaged/executive-dashboard"
-  },
-  {
-    title: "Customer Portal Platform",
-    description: "Modern web application for customer self-service with automated workflows and real-time notifications.",
-    image: "💻",
-    technologies: ["Next.js", "TypeScript", "PostgreSQL"],
-    category: "Development",
-    link: "/projects/customer-portal",
-    github: "https://github.com/marinamaged/customer-portal"
+    link: "/projects/operational-analytics",
+    github: "https://github.com/marinamaged/clickdna-analytics"
   }
 ];
 

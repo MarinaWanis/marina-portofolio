@@ -55,7 +55,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold">Email</h3>
-                  <p className="text-muted-foreground">marina.maged@example.com</p>
+                  <p className="text-muted-foreground">marinamaged1996@outlook.com</p>
                 </div>
               </div>
 
@@ -65,7 +65,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold">Phone</h3>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground">+971 50 896 4120</p>
                 </div>
               </div>
 

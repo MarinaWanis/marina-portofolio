@@ -21,32 +21,23 @@ export function Hero() {
           >
             <div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
-                Hi, I'm{" "}
                 <span className="bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
                   Marina Maged
                 </span>
               </h1>
               <p className="text-xl sm:text-2xl text-foreground/90 dark:text-foreground/95 mt-4 font-semibold">
-                Automation & Data Engineer
+                Data & Automation Engineer | Power BI, Backend & Operations Analytics
               </p>
               <p className="text-lg text-foreground/80 dark:text-foreground/85 mt-6 max-w-2xl leading-relaxed">
-                I build automation, analytics, and backend solutions that reduce manual work and improve operational visibility in e-commerce systems.
+                I build systems that turn operational complexity into clarity.
+                From automating manual workflows to designing logistics platforms and decision-ready dashboards, I help teams move faster, with confidence.
               </p>
-              <p className="text-sm text-muted-foreground dark:text-muted-foreground/90 mt-4 max-w-2xl">
-                6+ years across RPA, Power BI, and software engineering in operations and e-commerce platforms.
-              </p>
-            </div>
-            
-            <div className="flex flex-wrap gap-3">
-              <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium">
-                Automation (RPA)
-              </span>
-              <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm font-medium">
-                Data Analytics (Power BI)
-              </span>
-              <span className="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm font-medium">
-                Software Engineering
-              </span>
+              <div className="text-sm text-muted-foreground dark:text-muted-foreground/90 mt-4 max-w-2xl space-y-1">
+                <p>📍 Dubai, UAE | Open to Remote</p>
+                <p>📊 50+ Power BI dashboards delivered</p>
+                <p>🤖 30+ automated processes (155+ hours/month saved)</p>
+                <p>🚚 Logistics, e-commerce & operations focus</p>
+              </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -57,6 +48,14 @@ export function Hero() {
                 View Projects
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
+              <a
+                href="/resume.pdf"
+                download
+                className="inline-flex items-center justify-center px-6 py-3 border border-border rounded-lg font-medium hover:bg-accent transition-colors"
+              >
+                <Download className="mr-2 h-4 w-4" />
+                Download Resume
+              </a>
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center px-6 py-3 border border-border rounded-lg font-medium hover:bg-accent transition-colors"
